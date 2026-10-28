@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAWY | تفاصيل المنتج</title>
+
+    <style>
+        body {
+            background-color: #E8DFD0;
+            color: #322E28;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: ltr;
+    padding: 10px 25px;
+    border-bottom: 5px solid #322E28;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 16px;
+    margin-left: 8px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #E8DFD0;
+    background-color: #322E28;
+}
+
+.product-details {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    align-items: center;
+}
+
+.product-image,
+.product-info {
+    flex: 1;
+}
+
+.product-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-info h2 {
+    font-size: 30px;
+}
+
+.price {
+    font-size: 26px;
+    font-weight: bold;
+    
+    padding-bottom: 20px;
+    border-bottom: 3px solid #322E28;
+    margin-bottom: 25px;
+}
+
+
+.sizes {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.sizes button {
+    padding: 12px 20px;
+    background-color: #F5F0E8;
+    color: #322E28;
+    border: 1px solid #B9A58B;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sizes button.selected {
+    background-color: #322E28;
+    color: #E8DFD0;
+    border-color: #322E28;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 15px;
+    background-color: #322E28;
+    color: #E8DFD0;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.description {
+    margin: 0 40px 40px;
+    padding: 25px 0;
+    border-top: 4px solid #322E28;
+    line-height: 1.8;
+}
+
+#cart-message {
+    color: red;
+}
+
+#cart-message.success {
+    color: green;
+}
+    </style>
+</head>
+<body>
+<header>
+    <h1>RAWY</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html" class="cart-icon" title="سلة المشتريات">🛒</a>
+    </nav>
+</header>
+
+<main>
+    <section class="product-details">
+
+        <div class="product-image">
+            <img src="images/ruh-white.jpg" alt="تيشيرت الرياض الأبيض">
+        </div>
+
+        <div class="product-info">
+            <h2>تيشيرت الرياض - الأبيض</h2>
+
+            <p class="price">230 ﷼</p>
+
+            <h3>المقاسات</h3>
+
+            <div class="sizes">
+                <button>S</button>
+                <button>M</button>
+                <button>L</button>
+                <button>XL</button>
+            </div>
+
+            <button class="add-to-cart">إضافة إلى السلة</button>
+            <p id="cart-message"></p>
+        </div>
+
+    </section>
+
+    <section class="description">
+        <h2>تفاصيل المنتج</h2>
+        <p>
+قطعة مستوحاة من روح الرياض، صُممت لتعكس هوية المدينة بأسلوب عصري ومميز
+يأتي تيشيرت الرياض الأبيض من RAWY ليجمع بين بساطة اللون الأبيض وجمال التفاصيل المستوحاة من العاصمة، في تصميم يمنح القطعة شخصية خاصة تتجاوز كونها مجرد تيشيرت عادي. فكل مدينة تحمل حكاية، وكل تصميم يحمل لمسة تعبّر عنها، وهذا ما نسعى إلى تقديمه من خلال مجموعتنا
+اخترنا اللون الأبيض ليكون أساسًا لتصميم هادئ ومتناسق،ويمنحك حرية تنسيق إطلالتك بالطريقة التي تناسب ذوقك. سواء كنت تفضل الإطلالات اليومية البسيطة أو تحب إضافة قطعة تحمل طابعًا مختلفًا إلى ملابسك، فإن هذا التيشيرت يمنحك مساحة للتعبير عن أسلوبك الخاص
+صُنع التيشيرت من القطن، ليكون خيارًا مناسبًا لمن يبحث عن قطعة عملية للاستخدام اليومي. ويأتي ضمن مجموعة RAWY التي تستلهم تصاميمها من المدن وتفاصيلها، وتحول هذه الأفكار إلى قطع تحمل طابعًا مميزًا وهوية واضحة
+نؤمن في RAWY بأن الملابس ليست مجرد ألوان وتصاميم، بل وسيلة للتعبير عن الذوق والانتماء والذكريات. لذلك صُممت هذه القطعة لتكون جزءًا من إطلالتك، وتحمل في تفاصيلها إشارة إلى مدينة لها مكانتها الخاصة.
+        </p>
+    </section>
+</main>
+<script>
+    const params = new URLSearchParams(window.location.search);
+const city = params.get("city");
+
+if (city === "jeddah") {
+    document.querySelector(".product-info h2").textContent = "تيشيرت جدة - الأسود";
+    document.querySelector(".product-image img").src = "images/jed-black.jpg.jpeg";
+
+    document.querySelector(".description p").textContent =
+        "قطعة مستوحاة من روح جدة صُممت لتعكس هوية المدينة بأسلوب عصري ومميز يأتي تيشيرت جدة الأسود من RAWY ليجمع بين فخامة اللون الأسود والتفاصيل المستوحاة من عروس البحر الأحمر في تصميم يمنح القطعة شخصية خاصة تتجاوز كونها مجرد تيشيرت عادي فكل مدينة تحمل حكاية وكل تصميم يحمل لمسة تعبّر عنها وهذا ما نسعى إلى تقديمه من خلال مجموعتنا اخترنا اللون الأسود ليكون أساسًا لتصميم يجمع بين الأناقة والهدوء ويمنحك حرية تنسيق إطلالتك بالطريقة التي تناسب ذوقك";
+}
+    const sizeButtons = document.querySelectorAll(".sizes button");
+
+    sizeButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            sizeButtons.forEach(function(btn) {
+                btn.classList.remove("selected");
+            });
+
+            button.classList.add("selected");
+        });
+    });
+    const cartButton = document.querySelector(".add-to-cart");
+const cartMessage = document.querySelector("#cart-message");
+
+cartButton.addEventListener("click", function() {
+    const selectedSize = document.querySelector(".sizes button.selected");
+
+    if (selectedSize === null) {
+        cartMessage.classList.remove("success") ;
+        cartMessage.textContent = "يرجى اختيار المقاس أولاً";
+   } else {
+    const product = {
+        name: document.querySelector(".product-info h2").textContent,
+        price: 230,
+        size: selectedSize.textContent,
+        image: document.querySelector(".product-image img").getAttribute("src")
+    };
+
+    let cart = JSON.parse(localStorage.getItem("rawyCart")) || [];
+
+    cart.push(product);
+
+    localStorage.setItem("rawyCart", JSON.stringify(cart));
+    cartMessage.classList.add("success") ;
+    cartMessage.textContent = "تمت إضافة المنتج إلى السلة بنجاح";
+}
+});
+</script>
+</body>
+</html>

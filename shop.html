@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAWY Collectino</title>
+<style>
+    body {
+        background-color: #e8dfd0;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 25px;
+        border-bottom: 5px solid #322e28;
+        padding-bottom: 15px;
+    }
+    nav a {
+        color: #322e28;
+        text-decoration: none;
+        margin-left: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        padding: 10px 16px;
+        text-decoration: none;
+        border-radius: 10px;
+    }
+
+    nav a:nth-child(1) {
+        background-color: #322e28;
+        color: #faebcb;
+    }
+
+    nav a:nth-child(2){
+        background-color: #322e28;
+        color: #faebcb;
+    }
+
+    nav a:nth-child(3){
+        background-color: #322e28;
+        color: #faebcb;
+    }
+    .collection-title {
+    text-align: center;
+    font-size: 36px;
+    color: #322e28;
+    margin-top: 45px;
+    }
+    
+    .title-line {
+        width: 200px;
+        height: 2px;
+        background-color: #322e28;
+        margin: 10px auto 0;
+        position: relative;
+        left: 0;
+    }
+
+    .collection-subtitle {
+        text-align: center;
+        color: #322e28;
+        font-size: 20px;
+        margin-top: 15px;
+    }
+    .product-card {
+        width: 320px;
+        margin: 40px;
+        text-align: center;
+        background-color: #f5f0e8;
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        display: block;
+    }
+    .product-container {
+        display:flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 25px;
+        flext-wrap: wrap;
+    }
+
+    header h1 {
+        font-size: 50px;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>RAWY</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html" class="cart-icon" title="سلة المشتريات">🛒</a>
+    </nav>
+</header>
+    <h1 class="collection-title">RAWY COLLECTION</h1>
+    <div class="title-line"></div>
+    <p class="collection-subtitle">كل قطعة تحكي قصة مختلفة</p>
+    <div class="product-container">
+    <div class="product-card" onclick="openProduct('riyadh')">
+    <img src="images/ruh-white.jpg" alt="تيشيرت الرياض الأبيض">
+    <h2>تيشيرت الرياض - اللون الأبيض</h2>
+</div>
+     <div class="product-card" onclick="openProduct('jeddah')">
+        <img src="images/jed-black.jpg.jpeg" alt="jed-black T-Shirt">
+        <h2>تيشيرت جدة غير - اللون الأسود</h2>
+    </div>
+    </div>
+<script>
+    function openProduct(city) {
+        window.location.href = "product.html?city=" + city;
+    }
+</script>
+</body>
+</html>
